@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="article"> 
+    <insert id="insertat" parameterType="avo">
+     insert into article 
+     values(article_seq.nextVal, 1, '0', sysdate, 0, #{writer_name}, #{password}, 
+     #{title}, #{content})
+    </insert>
+    
+     <select id="selectall" resultType="avo">
+    	select * from article order by 1 desc
+     </select>
+     
+     <select id="detail" resultType="avo" parameterType="int">
+     	select * from article where article_id=#{article_id}
+     </select>
+     
+     <delete id="delete" parameterType="int">
+     	delete from article where article_id=#{article_id}
+     </delete>
+     
+     <update id="update" parameterType="avo">
+     	update article set title=#{title}, writer_name=#{writer_name},
+     	posting_date=sysdate, content=#{content} where article_id=#{article_id}
+     </update>
+     
+     <update id="hitup" parameterType="int">
+     	update article set posting_id=posting_id+1 where article_id=#{article_id}
+     </update>
+ 
+    </mapper>

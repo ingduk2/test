@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<constant name="struts.i18n.encoding" value="EUC-KR"/>
+<package name="default" namespace="/" extends="struts-default">
+<!-- documentRoot의 경로를 index로 요청을 하라는 뜻 -->
+<default-action-ref name="index" />
+<action name="index">
+	<result>index.jsp</result>
+</action>
+
+<action name="insertat" class="action.InsertAction">
+	<result type="redirectAction">
+		<param name="actionName">list</param>
+	</result>
+</action>
+
+<action name="writeForm">
+	<result>/writeForm.jsp</result>
+</action>
+
+<action name="list" class="action.ListAction">
+	<result>/list.jsp</result>
+</action>
+
+<action name="detail" class="action.DetailAction">
+	<result>/read_view.jsp</result>
+</action>
+
+<action name="read" class="action.DetailAction">
+	<result>/update_form_view.jsp</result>
+</action>
+
+<action name="update" class="action.UpdateAction">
+	<result type="redirectAction">
+		<param name="actionName">list</param>
+	</result>
+</action>
+</package>
+</struts>
+
