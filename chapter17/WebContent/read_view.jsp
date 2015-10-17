@@ -1,24 +1,24 @@
-<%@ page contentType="text/html; charset=euc-kr" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/struts-tags"  prefix="s"%>
 <html>
-<head><title>±Û ÀÐ±â</title></head>
+<head><title>ê¸€ ì½ê¸°</title></head>
 <body>
 <table>
 <s:iterator value="vo">
 <tr>
-	<td>Á¦¸ñ</td>
+	<td>ì œëª©</td>
 	<td><s:property  value="title"/></td>
 </tr>
 <tr>
-	<td>ÀÛ¼ºÀÚ</td>
+	<td>ìž‘ì„±ìž</td>
 	<td><s:property  value="writer_name"/></td>
 </tr>
 <tr>
-	<td>ÀÛ¼ºÀÏ</td>
+	<td>ìž‘ì„±ì¼</td>
 	<td><s:property  value="posting_date"/></td>
 </tr>
 <tr>
-	<td>³»¿ë</td>
+	<td>ë‚´ìš©</td>
 	<td>
 		<pre><s:property  value="content"/></pre>
 	</td>
@@ -26,10 +26,10 @@
 
 <tr>
 	<td colspan="2">
-	<a href="list">¸ñ·Ïº¸±â</a>
-	<a href="">´äº¯¾²±â</a>
-	<a href="read?article_id=${article_id}">¼öÁ¤ÇÏ±â</a>
-	<a href="delete?article_id=${article_id}">»èÁ¦ÇÏ±â</a>
+	<a href="list">ëª©ë¡ë³´ê¸°</a>
+	<a href="">ë‹µë³€ì“°ê¸°</a>
+	<a href="read?article_id=${article_id}">ìˆ˜ì •í•˜ê¸°</a>
+	<a href="delete?article_id=${article_id}">ì‚­ì œí•˜ê¸°</a>
 	</td>
 </tr>
 </s:iterator>

@@ -1,19 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <html>
-<head><title>±Û¾²±â</title>
+<head><title>ê¸€ì“°ê¸°</title>
 <script src="js/board.js"></script>
 </head>
 <body>
 <form action="insertat" method="post">
-Á¦¸ñ: <input type="text" name="title" size="20"/> <br/>
-ÀÛ¼ºÀÚ: <input type="text" name="writer_name" /> <br/>
-±Û¾ÏÈ£: <input type="password" name="password" /> <br/>
-±Û³»¿ë: <br/>
+ì œëª©: <input type="text" name="title" size="20"/> <br/>
+ìž‘ì„±ìž: <input type="text" name="writer_name" /> <br/>
+ê¸€ì•”í˜¸: <input type="password" name="password" /> <br/>
+ê¸€ë‚´ìš©: <br/>
 <textarea name="content" cols="40" rows="5"></textarea>
 <br/>
-<input type="submit" value="Àü¼Û" onclick="goUrl('list')" />
-<input type="button" value="¸®½ºÆ®" onclick="goUrl('list')" />
+<input type="submit" value="ì „ì†¡" onclick="goUrl('list')" />
+<input type="button" value="ë¦¬ìŠ¤íŠ¸" onclick="goUrl('list')" />
 </form>
 </body>
 </html>

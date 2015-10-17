@@ -29,9 +29,19 @@
 	<result>/read_view.jsp</result>
 </action>
 
+
+<action name="delete" class="action.DeleteAction">
+	<result type="redirectAction">
+		<param name="actionName">list</param>
+	</result>
+</action>
+
+
 <action name="read" class="action.DetailAction">
 	<result>/update_form_view.jsp</result>
 </action>
+
+
 
 <action name="update" class="action.UpdateAction">
 	<result type="redirectAction">
