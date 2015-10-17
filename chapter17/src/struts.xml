@@ -48,6 +48,9 @@
 		<param name="actionName">list</param>
 	</result>
 </action>
+
+
+
 </package>
 </struts>
 

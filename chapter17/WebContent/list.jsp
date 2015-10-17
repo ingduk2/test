@@ -27,7 +27,8 @@
 	<s:iterator value="list">	
 	<tr>
 		<td class="article_id"><s:property value="article_id"/></td>
-		<td class="title"><a href="detail?article_id=${article_id}&hitup?article_id=${article_id}">
+		<td class="title"><a href="detail?article_id=${article_id}">
+		<!-- <input type=""> -->
 		<s:property value="title"/></a></td>
 		<td class="writer_name"><s:property value="writer_name"/></td>
 		<td class="posting_date"><s:property value="posting_date"/></td>

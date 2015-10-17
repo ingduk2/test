@@ -26,6 +26,8 @@ public class DetailAction implements Action {
 	public String execute() throws Exception {
 		//article_id=vo.getArticle_id();
 		System.out.println(article_id);
+		
+		ArticleDao.getDao().hitup(article_id);
 		vo = ArticleDao.getDao().detail(article_id);
 		return SUCCESS;
 	}
