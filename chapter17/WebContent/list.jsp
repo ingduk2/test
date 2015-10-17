@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="/struts-tags" prefix="s" %>
 <html>
-<head><title>게시글 목록</title></head>
+<head><title>�Խñ� ���</title></head>
 <body>
 <form method="post">
 <table border="1">
@@ -11,17 +11,17 @@
 		</td>
 	</tr>
 	<tr>
-		<td>글 번호</td>
-		<td>제목</td>
-		<td>작성자</td>
-		<td>작성일</td>
-		<td>조회수</td>
+		<td>�� ��ȣ</td>
+		<td>����</td>
+		<td>�ۼ���</td>
+		<td>�ۼ���</td>
+		<td>��ȸ��</td>
 	</tr>
 	
 
 <!-- 	<tr> -->
 <!-- 		<td colspan="5"> -->
-<!-- 			게시글이 없습니다. -->
+<!-- 			�Խñ��� �����ϴ�. -->
 <!-- 		</td> -->
 <!-- 	</tr> -->
 	<s:iterator value="list">	
@@ -37,7 +37,7 @@
      
 	<tr>
 		<td colspan="5">
-			<a href="writeForm">글쓰기</a>
+			<a href="writeForm">�۾���</a>
 		</td>
 	</tr>	
 	
