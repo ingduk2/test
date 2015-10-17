@@ -50,7 +50,7 @@ public class ArticleDao {
 	
 	public void hitup(int article_id){
 		SqlSession ss = FactoryService.getFactory().openSession(true);
-		ss.update("article.update", article_id);
+		ss.update("article.hitup", article_id);
 		ss.close();
 	}
 	

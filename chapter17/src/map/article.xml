@@ -27,7 +27,7 @@
      </update>
      
      <update id="hitup" parameterType="int">
-     	update article set posting_id=posting_id+1 where article_id=#{article_id}
+     	update article set read_count=read_count+1 where article_id=#{article_id}
      </update>
  
     </mapper>
