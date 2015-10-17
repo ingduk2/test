@@ -27,7 +27,7 @@
 <tr>
 	<td colspan="2">
 	<a href="list">목록보기</a>
-	<a href="">답변쓰기</a>
+	<a href="reply">답변쓰기</a>
 	<a href="read?article_id=${article_id}">수정하기</a>
 	<a href="delete?article_id=${article_id}">삭제하기</a>
 	</td>

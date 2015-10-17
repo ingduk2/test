@@ -10,7 +10,7 @@
 		<environment id="">
 			<transactionManager type="JDBC" />
 			<dataSource type="JNDI">
-				<property name="data_source" value="java:comp/env/jdbc/magu" />
+				<property name="data_source" value="java:comp/env/jdbc/sky" />
 			</dataSource>
 		</environment>
 	</environments>
