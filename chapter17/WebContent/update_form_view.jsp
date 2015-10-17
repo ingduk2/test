@@ -1,18 +1,18 @@
-<%@ page contentType="text/html; charset=euc-kr" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/struts-tags"  prefix="s"%>
 <html>
-<head><title>¼öÁ¤ÇÏ±â</title></head>
+<head><title>ìˆ˜ì •í•˜ê¸°</title></head>
 <body>
 <form action="update" method="post">
 <input type="hidden" name="article_id" value="${article_id}">
 <s:iterator value="vo">
-Á¦¸ñ: <input type="text" name="title" size="20" value="${title}"/> <br/>
-ÀÛ¼ºÀÚ: <input type="text" name="writer_name" size="20" value="${writer_name}"/><br/>
-±Û³»¿ë: <br/>
+ì œëª©: <input type="text" name="title" size="20" value="${title}"/> <br/>
+ìž‘ì„±ìž: <input type="text" name="writer_name" size="20" value="${writer_name}"/><br/>
+ê¸€ë‚´ìš©: <br/>
 <textarea name="content" cols="40" rows="5">${content}</textarea>
 </s:iterator>
 <br/>
-<input type="submit" value="¼öÁ¤"/>
+<input type="submit" value="ìˆ˜ì •"/>
 </form>
 </body>
 </html>
