@@ -49,6 +49,15 @@
 	</result>
 </action>
 
+<!-- 답변글 위한 액션 -->
+<action name="reply" class="action.ReplyAction">
+	<result>/replyForm.jsp</result>
+</action>
+
+<!-- 뎝변글 폼에서 처리하기 위한 액션 -->
+<action name="reply_in" class="action.ReplyInsertAction">
+	<result type="chain">list</result>
+</action>
 
 
 </package>

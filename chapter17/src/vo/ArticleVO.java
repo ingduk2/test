@@ -4,6 +4,8 @@ public class ArticleVO {
 	private String sequence_no, posting_date, writer_name;
 	private String password,  title, content;
 	private int article_id, group_id, read_count;
+	private int ref, seq, lvl; // 답글 처리를 위한 변수
+	
 	public String getSequence_no() {
 		return sequence_no;
 	}
@@ -57,5 +59,23 @@ public class ArticleVO {
 	}
 	public void setRead_count(int read_count) {
 		this.read_count = read_count;
-	} 
+	}
+	public int getRef() {
+		return ref;
+	}
+	public void setRef(int ref) {
+		this.ref = ref;
+	}
+	public int getSeq() {
+		return seq;
+	}
+	public void setSeq(int seq) {
+		this.seq = seq;
+	}
+	public int getLvl() {
+		return lvl;
+	}
+	public void setLvl(int lvl) {
+		this.lvl = lvl;
+	}
 }
