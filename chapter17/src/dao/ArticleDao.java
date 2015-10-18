@@ -75,11 +75,13 @@ public class ArticleDao {
 			ss.update("article.replyUpdate", vo);
 			ss.insert("article.replyInsert", vo);
 			ss.commit();
-			ss.close();
+			
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 			ss.rollback();
+			
+		}finally{
 			ss.close();
 		}
 	}
