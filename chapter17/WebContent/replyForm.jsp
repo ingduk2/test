@@ -16,10 +16,9 @@
 	<form action="reply_in" method="post">
 	
 		<!--  다음 페이지로 이동할때 답변글에 대한 처리를 해주기 위해서, 답변글에 대한 정보를 갱신한 후 폼의 히든 값으로 전송을 한다. -->
-		<input type="text" name="ref" value="${ref}" />
-		<input type="text" name="seq" value="${seq+1}" />
-		<input type="text" name="lvl" value="${lvl+1}" />
-		<!-- !!!!!!!!!!! 확인 후text- hidden으로 변경할것 -->
+		<input type="hidden" name="ref" value="${ref}" />
+		<input type="hidden" name="seq" value="${seq+1}" />
+		<input type="hidden" name="lvl" value="${lvl+1}" />
 	
 		제목: <input type="text" name="title" size="20"/> <br/>
 		작성자: <input type="text" name="writer_name" /> <br/>

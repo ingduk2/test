@@ -67,11 +67,18 @@ public class ArticleDao {
 		List<ArticleVO> list=ss.selectList("article.selectcnt",pv);
 		return list;
 	}
-	public void replyInsert(ArticleVO vo){
+	public void replyInsert(ArticleVO vo) {
+		SqlSession ss = FactoryService.getFactory().openSession();
 		
-		SqlSession ss= FactoryService.getFactory().openSession(true);
-		
-		ss.insert("article.Analrazum", vo);
+		try {
+			ss.update("article.replyUpdate", vo);
+			ss.insert("article.replyInsert", vo);
+			ss.commit();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			ss.rollback();
+		}
 	}
 	
 }

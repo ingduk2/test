@@ -10,7 +10,7 @@
     </insert>
     
      <select id="selectall" resultType="avo">
-    	select * from article order by 1 desc
+    	select * from article order by order by ref desc, seq asc
      </select>
      
      <select id="detail" resultType="avo" parameterType="int">
@@ -36,9 +36,20 @@
      
      <select id="selectcnt" parameterType="pvo" resultType="avo">
      	select * from (select rownum r_num, a.* from (
-		select * from article order by article_id desc
+		select * from article order by ref desc
 		) a
-		)where r_num between #{start} and #{end}
+		)where r_num between #{start} and #{end} order by ref desc, seq asc
      </select>
+ 
+ 	<insert id="replyInsert" parameterType="avo">
+		insert into article values(article_seq.nextVal, 1, '0', sysdate, 0, #{writer_name}, #{password},
+		#{title}, #{content}, #{ref}, #{seq}, #{lvl})
+	</insert>
+	
+	<update id="replyUpdate" parameterType="avo">
+		<![CDATA[
+			update article set seq=seq+1 where seq >= #{seq} and ref=#{ref}
+		]]>
+	</update>
  
     </mapper>

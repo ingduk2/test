@@ -23,12 +23,37 @@
 		<td>조회수</td>
 	</tr>
 	
-	<s:iterator value="list">	
+	<%-- <s:iterator value="list">	
 	<tr>
 		<td class="article_id"><s:property value="article_id"/></td>
 		<td class="title"><a href="detail?article_id=${article_id}">
 		<!-- <input type=""> -->
 		<s:property value="title"/></a></td>
+		<td class="writer_name"><s:property value="writer_name"/></td>
+		<td class="posting_date"><s:property value="posting_date"/></td>
+		<td class="read_count"><s:property value="read_count"/></td>
+	</tr>
+     </s:iterator> --%>
+     
+     <s:iterator value="list">
+	
+	<s:url action="detail" id="goDetail">
+		<s:param name="article_id" value="article_id" />
+	</s:url>
+		
+	<tr>
+		<td class="article_id"><s:property value="article_id"/></td>
+		<td class="title">
+			<s:a href="%{goDetail}">
+				<c:forEach begin="1" end="${lvl}"> 
+					&nbsp;&nbsp;&nbsp;
+				</c:forEach>
+				<s:if test="%{lvl !=0}">
+					->
+				</s:if>
+				<s:property value="title" />
+			</s:a>
+		</td>
 		<td class="writer_name"><s:property value="writer_name"/></td>
 		<td class="posting_date"><s:property value="posting_date"/></td>
 		<td class="read_count"><s:property value="read_count"/></td>

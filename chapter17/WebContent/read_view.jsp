@@ -26,8 +26,15 @@
 
 <tr>
 	<td colspan="2">
+	
+	<s:url id="goReply" action="reply">
+		<s:param name="ref" value="vo.ref" />
+		<s:param name="seq" value="vo.seq" />
+		<s:param name="lvl" value="vo.lvl" />
+	</s:url>
+	
 	<a href="list">목록보기</a>
-	<a href="reply">답변쓰기</a>
+	<s:a href="%{goReply}">답변쓰기</s:a>
 	<a href="read?article_id=${article_id}">수정하기</a>
 	<a href="delete?article_id=${article_id}">삭제하기</a>
 	</td>
