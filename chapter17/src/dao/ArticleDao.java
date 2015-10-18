@@ -67,4 +67,11 @@ public class ArticleDao {
 		List<ArticleVO> list=ss.selectList("article.selectcnt",pv);
 		return list;
 	}
+	public void replyInsert(ArticleVO vo){
+		
+		SqlSession ss= FactoryService.getFactory().openSession(true);
+		
+		ss.insert("article.Analrazum", vo);
+	}
+	
 }
