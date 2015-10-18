@@ -41,8 +41,8 @@ public class ListArticleService {
 //				return new ArticleListModel();
 //			}
 
-		//갯수 구하고 count
-		int totalArticleCount=cnt; //dao액션에서 연결
+		//媛��닔 援ы븯怨� count
+		int totalArticleCount=cnt; //dao�븸�뀡�뿉�꽌 �뿰寃�
 		if (totalArticleCount == 0) {
 		return new ArticleListVO();
 	}
@@ -58,7 +58,7 @@ public class ListArticleService {
 			
 			PaginVO pv= new PaginVO(firstRow, endRow);
 			
-			//dao 추가하고 where row, endrow
+			//dao 異붽��븯怨� where row, endrow
 //			List<ArticleVO> articleList = articleDao.select(conn, firstRow,
 //					endRow);
 
@@ -82,3 +82,4 @@ public class ListArticleService {
 		return pageCount;
 	}
 }
+ 

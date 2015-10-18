@@ -79,8 +79,7 @@
 		<td colspan="5">
 			<a href="writeForm">글쓰기</a>
 		</td>
-	</tr>	
-	
+	</tr>		
 </table>
 </form>
 </body>

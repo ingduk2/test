@@ -65,6 +65,7 @@ public class ArticleDao {
 	public List<ArticleVO> selectcnt(PaginVO pv){
 		SqlSession ss = FactoryService.getFactory().openSession();
 		List<ArticleVO> list=ss.selectList("article.selectcnt",pv);
+		ss.close();
 		return list;
 	}
 	public void replyInsert(ArticleVO vo) {
@@ -74,10 +75,12 @@ public class ArticleDao {
 			ss.update("article.replyUpdate", vo);
 			ss.insert("article.replyInsert", vo);
 			ss.commit();
+			ss.close();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 			ss.rollback();
+			ss.close();
 		}
 	}
 	
