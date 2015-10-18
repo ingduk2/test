@@ -54,4 +54,11 @@ public class ArticleDao {
 		ss.close();
 	}
 	
+	public void replyInsert(ArticleVO vo){
+		
+		SqlSession ss= FactoryService.getFactory().openSession(true);
+		
+		ss.insert("article.Analrazum", vo);
+	}
+	
 }

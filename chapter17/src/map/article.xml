@@ -6,7 +6,7 @@
     <insert id="insertat" parameterType="avo">
      insert into article 
      values(article_seq.nextVal, 1, '0', sysdate, 0, #{writer_name}, #{password}, 
-     #{title}, #{content})
+     #{title}, #{content}, article_seq.nextVal, 1, #{lvl})
     </insert>
     
      <select id="selectall" resultType="avo">
