@@ -1,3 +1,5 @@
+drop table article;
+drop sequence article_seq;
 create table article (
  article_id number not null,
  group_id number not null,
@@ -8,15 +10,21 @@ create table article (
  password varchar2(10),
  title varchar2(100),
  content clob,
+ ref NUMBER,
+ seq NUMBER,
+ lvl NUMBER,
  primary key (article_id)
 );
-
+ 
 create table id_sequence(
 sequence_name varchar2(10) not null,
 next_value int not null,
 primary key(sequence_name)
 );
-
+ 
 create sequence article_seq
 increment by 1
 start with 1;
+
+
+select * from article;
