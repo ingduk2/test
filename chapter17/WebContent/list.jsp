@@ -23,12 +23,6 @@
 		<td>조회수</td>
 	</tr>
 	
-
-<!-- 	<tr> -->
-<!-- 		<td colspan="5"> -->
-<!-- 			게시글이 없습니다. -->
-<!-- 		</td> -->
-<!-- 	</tr> -->
 	<s:iterator value="list">	
 	<tr>
 		<td class="article_id"><s:property value="article_id"/></td>
