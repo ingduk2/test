@@ -5,6 +5,7 @@
 <configuration>
 <typeAliases>
  		<typeAlias type="vo.ArticleVO" alias="avo"/>   <!-- type 위치가 정확히 일치 해야 함. -->
+ 		<typeAlias type="vo.PaginVO" alias="pvo"/>
 </typeAliases>
 	<environments default="">
 		<environment id="">

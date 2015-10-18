@@ -29,5 +29,16 @@
      <update id="hitup" parameterType="int">
      	update article set read_count=read_count+1 where article_id=#{article_id}
      </update>
+     
+     <select id="count" resultType="int">
+     	select count(*) cnt from article
+     </select>
+     
+     <select id="selectcnt" parameterType="pvo" resultType="avo">
+     	select * from (select rownum r_num, a.* from (
+		select * from article order by article_id desc
+		) a
+		)where r_num between #{start} and #{end}
+     </select>
  
     </mapper>

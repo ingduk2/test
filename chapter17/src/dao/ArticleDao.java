@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import service.FactoryService;
 import vo.ArticleVO;
+import vo.PaginVO;
 
 public class ArticleDao {
 	private static ArticleDao dao;
@@ -54,4 +55,16 @@ public class ArticleDao {
 		ss.close();
 	}
 	
+	public int selectCount(){
+		SqlSession ss = FactoryService.getFactory().openSession();
+		int cnt = ss.selectOne("article.count");
+		ss.close();
+		return cnt;
+	}
+	
+	public List<ArticleVO> selectcnt(PaginVO pv){
+		SqlSession ss = FactoryService.getFactory().openSession();
+		List<ArticleVO> list=ss.selectList("article.selectcnt",pv);
+		return list;
+	}
 }

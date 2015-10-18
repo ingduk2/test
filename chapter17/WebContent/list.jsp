@@ -6,10 +6,14 @@
 <body>
 <form method="post">
 <table border="1">
+	<c:if test="${articleListVO.totalPageCount > 0}">
 	<tr>
 		<td colspan="5">
+		${articleListVO.startRow}-${articleListVO.endRow}
+		[${articleListVO.requestPage}/${articleListVO.totalPageCount}]
 		</td>
 	</tr>
+	</c:if>
 	<tr>
 		<td>글 번호</td>
 		<td>제목</td>
@@ -35,6 +39,21 @@
 		<td class="read_count"><s:property value="read_count"/></td>
 	</tr>
      </s:iterator>
+     
+   <tr>
+		<td colspan="5">
+		
+		<c:if test="${beginPageNumber > 10}">
+			<a href="<c:url value="/list?requestPageNumber=${beginPageNumber-1}"/>">이전</a>
+		</c:if>
+		<c:forEach var="pno" begin="${beginPageNumber}" end="${endPageNumber}">
+		<a href="<c:url value="/list?requestPageNumber=${pno}" />">[${pno}]</a>
+		</c:forEach>
+		<c:if test="${endPageNumber < listModel.totalPageCount}">
+			<a href="<c:url value="/list?requestPageNumber=${endPageNumber + 1}"/>">다음</a>
+		</c:if>
+		</td>
+	</tr> 
      
 	<tr>
 		<td colspan="5">
