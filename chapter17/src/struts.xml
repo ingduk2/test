@@ -59,6 +59,10 @@
 	<result type="chain">list</result>
 </action>
 
+<!-- 테스트 페이지 연결 -->
+<action name="test">
+	<result>/testpage.jsp</result>
+</action>
 
 </package>
 </struts>
